@@ -1,0 +1,31 @@
+<div class="card text-bg-secondary mb-3">
+  <div class="card-header">Lista de estudiantes</div>
+  <div class="card-body">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th scope="col">DNI</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Fecha de nacimiento</th>
+          <th scope="col">Género</th>
+          <th scope="col">Código</th>
+          <th scope="col">Serie</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let itemEstudiantes of estudianteList" class="text-bg-secondary mb-3">
+          <td>{{itemEstudiantes.dni}}</td>
+          <td>{{itemEstudiantes.nombre}}</td>
+          <td>{{itemEstudiantes.apellido}}</td>
+          <td>{{itemEstudiantes.edad}}</td>
+          <td>{{itemEstudiantes.fechaNacimiento}}</td>
+          <td>{{itemEstudiantes.genero}}</td>
+          <td>{{itemEstudiantes.codigo}}</td>
+          <td>{{itemEstudiantes.serie}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
