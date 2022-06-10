@@ -11,7 +11,7 @@ export class EstudianteComponent implements OnInit {
   estudianteList: any;
 
   constructor(private estudianteService:EstudianteService) {
-    this.estudianteList = this.estudianteService.getEstudianteByEscuela();
+    //this.estudianteList = this.estudianteService.getEstudianteByEscuela();
     //this.estudianteList = ListaEstudiantes;
     //console.log(this.estudianteList);
   }
@@ -21,7 +21,8 @@ export class EstudianteComponent implements OnInit {
   }
 
   listarEstudiantesByEscuela(idescuela=3){
-    this.estudianteList.getEstudianteByEscuela(idescuela).subscribe((res:any) => {
+    //this.estudianteList.getEstudianteByEscuela(idescuela).subscribe((res:any) => { --- Aquí el error, debe ser como el de abajo
+      this.estudianteService.getEstudianteByEscuela(idescuela).subscribe((res:any) => {
       this.estudianteList = res.data;
     })
   }

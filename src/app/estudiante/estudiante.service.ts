@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { threadId } from 'worker_threads';
+import { Observable } from 'rxjs/internal/Observable';
 import {HttpClient} from '@angular/common/http'
 import { URL_SERVICIOS } from 'src/environments/environment';
 
