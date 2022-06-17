@@ -17,4 +17,8 @@ export class EstudianteService {
   getEstudianteByEscuela(idescuela=3): Observable<any>{
     return this.http.get<any>(this.api+"/estudiante/lista?idescuela="+idescuela)
   }
+
+  getEstudianteByEscuelaAndPage(idescuela=3,pagina=0){
+    return this.http.get<any>(this.api+"/estudiante/listaPage?idescuela="+idescuela+"&pagina="+pagina)
+  }
 }

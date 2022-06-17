@@ -9,6 +9,10 @@ import { EstudianteComponent } from './estudiante/estudiante.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { EstudianteService } from './estudiante/estudiante.service';
+import { InicioComponent } from './inicio/inicio.component';
+import { EscuelaComponent } from './escuela/escuela.component';
+import { CrearComponent } from './escuela/crear/crear.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,13 +20,17 @@ import { EstudianteService } from './estudiante/estudiante.service';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    EstudianteComponent
+    EstudianteComponent,
+    InicioComponent,
+    EscuelaComponent,
+    CrearComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [EstudianteService],
   bootstrap: [AppComponent]

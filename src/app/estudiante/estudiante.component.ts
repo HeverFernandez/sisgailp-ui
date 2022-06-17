@@ -21,7 +21,6 @@ export class EstudianteComponent implements OnInit {
   }
 
   listarEstudiantesByEscuela(idescuela=3){
-    //this.estudianteList.getEstudianteByEscuela(idescuela).subscribe((res:any) => { --- Aquí el error, debe ser como el de abajo
       this.estudianteService.getEstudianteByEscuela(idescuela).subscribe((res:any) => {
       this.estudianteList = res.data;
     })

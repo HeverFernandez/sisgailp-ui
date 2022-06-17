@@ -1,0 +1,25 @@
+<div class="card bg-light">
+  <h5 class="card-header">{{titulo}}</h5>
+  <div class="card-body">
+    <form (ngSubmit) = "crearEscuela()">
+      <div class="row mb-3">
+        <label for="nombre" class="col-sm-2 col-form-label">Denominación</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" placeholder="Ingrese la denominación de la escuela" [(ngModel)]="escuela.denominacion" name="nombre">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="apellido" class="col-sm-2 col-form-label">Codigo escuela</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" placeholder="Ingrese el codigo de escuela" [(ngModel)]="escuela.codigoEscuela" name="apellido">
+        </div>
+      </div>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button class="btn btn-primary me-md-2" type="button">Cancelar</button>
+          <button class="btn btn-primary" role="button">Registrar</button>
+        </div>
+
+    </form>
+  </div>
+</div>
