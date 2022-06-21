@@ -20,9 +20,11 @@ export class EscuelaService {
 
   registrarEscuela(escuela: Escuela): Observable<any>{
     console.log(escuela);
-    //----- Para que el registro sea exitoso, el unico cambio que falto es castear al tipo Escuela despues del: this.http.post----
-    //return this.http.post<Escuela>(this.api+"/escuela/registrar",escuela,{headers: this.httpHeaders})
 
     return this.http.post<Escuela>(this.api+"/escuela/registrar",escuela,{headers: this.httpHeaders})
+  }
+
+  eliminarEscuela(id:number): Observable<Escuela>{
+    return this.http.delete<Escuela>(this.api+"/escuela/eliminar/"+id,{headers: this.httpHeaders})
   }
 }

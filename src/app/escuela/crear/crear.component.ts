@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { Escuela } from '../Escuela';
 import { EscuelaService } from '../escuela.service';
 
@@ -13,7 +14,8 @@ export class CrearComponent implements OnInit {
   escuela: Escuela = new Escuela();
 
   constructor(private escuelaService: EscuelaService,
-    private router: Router
+    private router: Router,
+    private activateRoute: ActivatedRoute
     ) { }
 
   ngOnInit(): void {
@@ -21,7 +23,11 @@ export class CrearComponent implements OnInit {
 
   public crearEscuela(): void{
     this.escuelaService.registrarEscuela(this.escuela).subscribe(
-      response => this.router.navigate(['/escuela'])
+      //response => this.router.navigate(['/escuela']) anterior
+      escuela => {
+        this.router.navigate(['/escuela'])
+       Swal.fire("Enhorabuena",'Se ha registrado de manera satisfactoria',"success")
+      }
     )
   }
 

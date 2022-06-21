@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Escuela } from './Escuela';
 import { EscuelaService } from './escuela.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-escuela',
@@ -21,4 +23,5 @@ export class EscuelaComponent implements OnInit {
     }
     )
   }
+
 }
